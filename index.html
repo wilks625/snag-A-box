@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snag-a-Box</title>
-    
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/foundation.css"/>
+    <link rel="stylesheet" href="assets/css/foundation.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -27,50 +27,61 @@
     <main>
       <div class="sidenav">
         <div class="grid-x grid-padding-x">
-            <div class="large-6 medium-6 cell">
-              <label>Select a console</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Xbox Series X</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">xbox Series S</label>
-            </div>
+          <div class="large-6 medium-6 cell">
+            <label>Select a console</label>
+            <input id="checkbox-seriesX" type="checkbox" /><label for="checkbox1"
+              >Xbox Series X</label
+            >
+            <input id="checkbox-seriesS" type="checkbox" /><label for="checkbox2"
+              >xbox Series S</label
+            >
           </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <label>Zip code:</label>
-              <input type="text" placeholder="large-12.cell" />
-            </div>
-          </div>
-          
+        </div>
+        <div class="grid-x grid-padding-x">
           <div class="large-12 cell">
-            <label>Radius:</label>
-            <select>
-              <option value="husker">10 miles</option>
-              <option value="starbuck">25 miles</option>
-              <option value="hotdog">50 miles</option>
-              <option value="apollo">100 miles</option>
-            </select>
+            <label>Zip code:</label>
+            <input id="zip-input" type="text" placeholder="Ex:23230" />
           </div>
-          <p><a href="#" class="button">Snag-a-Box!</a><br/>
+        </div>
 
-
-
-
+        <div class="large-12 cell">
+          <label>Radius:</label>
+          <select id="radius-input">
+            <option value="husker">10 miles</option>
+            <option value="starbuck">25 miles</option>
+            <option value="hotdog">50 miles</option>
+            <option value="apollo">100 miles</option>
+          </select>
+        </div>
+        <p><a href="#" id="search-btn" class="button">Snag-a-Box!</a><br /></p>
       </div>
 
-      <div id="container-bestbuy">
-        
-        
+
+      <div id="container-bestbuy" class="grid-x grid-padding-x info-card">
+        <div class="large-12 cell">
+          <div class="primary callout">
+            <p><strong>bestbuy stuff</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
+          </div>
+        </div>
       </div>
 
-      <div id="container-walmart">
-        
+      <div id="container-walmart" class="grid-x grid-padding-x info-card">
+        <div class="large-12 cell">
+          <div class="primary callout">
+            <p><strong>walmart stuff</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
+          </div>
+        </div>
       </div>
 
-      <div id="container-target"> <!--saved for target api-->
-        
-    </div>
+      <div id="container-target" class="grid-x grid-padding-x info-card">
+        <div class="large-12 cell">
+          <div class="primary callout">
+            <p><strong>target stuff</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
+          </div>
+        </div>
+      </div>
 
-
-    <iframe
+      <!-- <iframe
   width="600"
   height="450"
   style="border:0"
@@ -78,10 +89,11 @@
   allowfullscreen
   src="https://www.google.com/maps/embed/v1/place?key=API_KEY
     &q=Space+Needle,Seattle+WA">
-</iframe>
- <!--testing below-->
+</iframe> -->
 
- <!-- <div class="grid-container">
+      <!--testing below-->
+
+      <!-- <div class="grid-container">
     
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
@@ -229,13 +241,6 @@
       </div>
     </div>
   </div> -->
-
-
-
-
-
-
-
     </main>
 
     <script src="assets/js/vendor.js"></script>

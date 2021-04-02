@@ -36,21 +36,11 @@ h1 {
     padding-left: 10px;
   }
 
-  #container-weather-information {
+  .info-card {
       margin-left: 380px;
       padding: 20px
       
      
-  }
-  #weather-information-card {
-      width: 600px;
-  }
-
-
-  .card-subtitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 25px;
   }
 
   .hide {
