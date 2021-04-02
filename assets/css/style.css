@@ -20,7 +20,7 @@ h1 {
 }
 
 #title {
-    color: green;
+    color: #76C617;
 }
 
 .sidenav {
@@ -42,15 +42,24 @@ h1 {
       
      
   }
+#container-bestbuy { background-color: #76C617;
 
+}
+
+#container-target { background-color: #76C617;
+
+}
+
+#container-walmart { background-color: #76C617;
+
+}
   .hide {
       visibility: hidden;
   }
 
-  /* .input-group {
+   .input-group {
    
   }
 
-  #search-btn {
-      d
-  } */
+  #search-btn { background-color: #76C617; 
+  }
