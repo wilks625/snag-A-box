@@ -1,13 +1,8 @@
 $(document).ready(function () {
   console.log("ready!");
-  let checkBoxSeriesX = $("#checkbox-seriesX");
-  let checkBoxSeriesS = $("#checkbox-seriesS");
-  console.log($("#zip-input").val());
 
-  let bbItemName = document.getElementById("item-name");
-  let bbInstoreAvail = document.getElementById("instore-avail");
-  let bbOnlineAvail = document.getElementById("online-avail");
   let searchBtn = $("#search-btn");
+
   searchBtn.on("click", getTargetStoreApi);
 });
 // working on this code below to fetch target stores API
@@ -15,56 +10,80 @@ function getTargetStoreApi() {
   let zipInput = $("#zip-input").val();
   let radiusInput = $("#radius-input").val();
   // debugger;
-  // var searchInputVal = document.querySelector('#search-input').value;
-  // var formatInputVal = document.querySelector('#format-input').value;
   console.log(zipInput);
   console.log(radiusInput);
 
   // if (!searchInputVal) {
   //   console.error("You need a search input value!");
   //   return;
-  var endpoint1 = "https://target-com-store-product-reviews-locations-data.p.rapidapi.com/location/search?zip=" + zipInput + "&radius=" + radiusInput;
+  var endpoint1 =
+    "https://target-com-store-product-reviews-locations-data.p.rapidapi.com/location/search?zip=" +
+    zipInput +
+    "&radius=" +
+    radiusInput;
   console.log(endpoint1);
-    const settings1 = {
-      async: true,
-      crossDomain: true,
-      url: endpoint,
-      method: "GET",
-      headers: {
-        "x-rapidapi-key": "ba80895230msh463bb1fa36014d2p15cc15jsne8204157e9a4",
-        "x-rapidapi-host":
-          "target-com-store-product-reviews-locations-data.p.rapidapi.com",
-      },
-    };
+  const settings1 = {
+    async: true,
+    crossDomain: true,
+    url: endpoint1,
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "306906be15msh8ff129144edc60ep1c73e2jsnd886232499eb",
+      "x-rapidapi-host":
+        "target-com-store-product-reviews-locations-data.p.rapidapi.com",
+    },
+  };
 
-    $.ajax(settings1).done(function (response) {
-      console.log(response);
-      console.log("lets hope this works!");
-    });
-    // create variable for store id from json api pull above
-    // create variable for tcin from json api pull above
+  $.ajax(settings1).done(function (response1) {
+    console.log(response1);
+    let tcin;
 
-    // display to target box (h3)Location name, (p)Address, Telephone number, store hours
-    
+    if (document.getElementById("radio-seriesX").checked) {
+      //Xbox series X is chosen
+      tcin = 80790841;
+      console.log(tcin);
+    } else if (document.getElementById("radio-seriesS").checked) {
+      // Xbox series S is chosen
+      tcin = 80790842;
+      console.log(tcin);
+    }// if there is time, add validation for if user does not select a radio
 
-    var endpoint2 = "https://target-com-store-product-reviews-locations-data.p.rapidapi.com/product/details?store_id=3991&tcin=53331580"
-    const settings2 = {
-      "async": true,
-      "crossDomain": true,
-      "url": endpoint2,
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": "306906be15msh8ff129144edc60ep1c73e2jsnd886232499eb",
-        "x-rapidapi-host": "target-com-store-product-reviews-locations-data.p.rapidapi.com"
-      }
-    };
-    
-    $.ajax(settings2).done(function (response) {
-      console.log(response);
-    });
+    console.log(tcin);
+    for (var i = 0; i < response1.locations.length; i++) {
+      let storeID = response1.locations[i].location_id;
+      var endpoint2 =
+        "https://target-com-store-product-reviews-locations-data.p.rapidapi.com/product/details?store_id=" +
+        storeID +
+        "&tcin=" +
+        tcin;
+      const settings2 = {
+        async: true,
+        crossDomain: true,
+        url: endpoint2,
+        method: "GET",
+        headers: {
+          "x-rapidapi-key":
+            "306906be15msh8ff129144edc60ep1c73e2jsnd886232499eb",
+          "x-rapidapi-host":
+            "target-com-store-product-reviews-locations-data.p.rapidapi.com",
+        },
+      };
 
-  }
-// }
+      $.ajax(settings2).done(function (response2) {
+        console.log(response2);
+      });
+    }
+  });
+  // display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
+}
+
+// IMPORTANT!!!!!!!!
+// incorporate 2nd server side API
+// incorporate local storage for users last inputs
+// mobile friendly, media queries???
+// take data from API and display in target information container
+  // display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
+
 
 // working code below
 // function getSeriesXApi() {
