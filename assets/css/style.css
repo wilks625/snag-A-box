@@ -42,16 +42,9 @@ h1 {
       
      
   }
-#container-bestbuy { background-color: #76C617;
 
-}
-
-#container-target { background-color: #76C617;
-
-}
-
-#container-walmart { background-color: #76C617;
-
+body {
+    background-color: #76C617;
 }
   .hide {
       visibility: hidden;
