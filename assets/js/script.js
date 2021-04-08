@@ -76,6 +76,27 @@ function getTargetStoreApi() {
   });
   // display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
 }
+function displayTarget () {
+  let locationName = document.createElement('p');
+  let targetAddress = document.createElement('p');
+  let targetTelephone = document.createElement('p')
+  let itemName = document.createElement('p')
+  let inStock = document.createElement('p')
+  console.log(locationName)
+
+  locationName = document.locations[0].location_names[0].name;
+  targetAddress = document.locations[1].address;
+  targetTelephone = document.location[0].contact_information.telephone_number;
+  itemName = document.product.esp_item.tcin;
+  inStock = document.product.availibility_status;
+  console.log("hello");
+
+  locationName.textContent = locationName;
+
+// searchBtn.on('click', displayTarget)
+console.log("testing")
+
+}
 
 // IMPORTANT!!!!!!!!
 // incorporate 2nd server side API
