@@ -5,7 +5,11 @@ header {
     text-align: center;
     background-color: dark grey;
     
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
+
 
 h1 {
     
@@ -23,6 +27,7 @@ h1 {
     color: #76C617;
 }
 
+
 .sidenav {
     height: 100%; 
     width: 375px; /* Set the width of the sidebar */
@@ -31,6 +36,7 @@ h1 {
     /* top: 0; Stay at the top */
     left: 0;
     background-color: rgb(243, 243, 243); /* Black */
+    
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     padding-left: 10px;
@@ -56,3 +62,36 @@ body {
 
   #search-btn { background-color: #76C617; 
   }
+
+  #target-store-information {
+    background-color: #76C617;
+    /* background-color: rgb(243, 243, 243); */
+  }
+
+
+  #listings0 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+
+#listings0 p {
+    line-height: 0px;
+}
+
+#listings0 h4 {
+    line-height: 20px;
+}
+
+
+
+  /* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
