@@ -25,6 +25,7 @@ h1 {
 
 #title {
     color: #76C617;
+    font-family:'Fredoka One', cursive;
 }
 
 
@@ -49,6 +50,8 @@ h1 {
      
   }
 
+
+
 body {
     background-color: #76C617;
 }
@@ -56,9 +59,7 @@ body {
       visibility: hidden;
   }
 
-   .input-group {
-   
-  }
+
 
   #search-btn { background-color: #76C617; 
   }
@@ -76,12 +77,206 @@ body {
     background-color: rgb(53, 56, 56);
     color: white;
 }
-
 #listings0 p {
     line-height: 0px;
+    
 }
-
 #listings0 h4 {
+    line-height: 20px;
+}
+#listings1 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings1 p {
+    line-height: 0px;
+}
+#listings1 h4 {
+    line-height: 20px;
+}
+#listings2 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings2 p {
+    line-height: 0px;
+}
+#listings2 h4 {
+    line-height: 20px;
+}
+#listings3 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings3 p {
+    line-height: 0px;
+}
+#listings3 h4 {
+    line-height: 20px;
+} 
+#listings4 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings4 p {
+    line-height: 0px;
+}
+#listings4 h4 {
+    line-height: 20px;
+}
+#listings5 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings5 p {
+    line-height: 0px;
+}
+#listings5 h4 {
+    line-height: 20px;
+}
+#listings6 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings6 p {
+    line-height: 0px;
+}
+#listings6 h4 {
+    line-height: 20px;
+}
+#listings7 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings7 p {
+    line-height: 0px;
+}
+#listings7 h4 {
+    line-height: 20px;
+}
+#listings8 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings8 p {
+    line-height: 0px;
+}
+#listings8 h4 {
+    line-height: 20px;
+}
+#listings9 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings9 p {
+    line-height: 0px;
+}
+#listings9 h4 {
+    line-height: 20px;
+}
+#listings10 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings10 p {
+    line-height: 0px;
+}
+#listings10 h4 {
+    line-height: 20px;
+}
+#listings11 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings11 p {
+    line-height: 0px;
+}
+#listings11 h4 {
+    line-height: 20px;
+}
+#listings12 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings12 p {
+    line-height: 0px;
+}
+#listings12 h4 {
+    line-height: 20px;
+}
+#listings13 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings13 p {
+    line-height: 0px;
+}
+#listings13 h4 {
+    line-height: 20px;
+}
+#listings14 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings14 p {
+    line-height: 0px;
+}
+#listings14 h4 {
+    line-height: 20px;
+}
+#listings15 {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+#listings15 p {
+    line-height: 0px;
+}
+#listings15 h4 {
     line-height: 20px;
 }
 
