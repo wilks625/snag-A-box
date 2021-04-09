@@ -6,7 +6,10 @@ $(document).ready(function () {
   searchBtn.on("click", getTargetStoreApi);
 });
 // working on this code below to fetch target stores API
+let locationName = document.createElement("div");
+
 function getTargetStoreApi() {
+  locationName.innerHTML = "";
   let zipInput = $("#zip-input").val();
   let radiusInput = $("#radius-input").val();
   // debugger;
@@ -71,32 +74,91 @@ function getTargetStoreApi() {
 
       $.ajax(settings2).done(function (response2) {
         console.log(response2);
+        
       });
+      // let targetContainer = document.getElementById("listings")
+      // let targetContainer = document.getElementById("listings")
+
+      city = response1.locations[i].location_names[0].name;
+      targetAddress1 = response1.locations[i].address.address_line1;
+      targetAddress2 = response1.locations[i].address.city;
+      targetAddress3 = response1.locations[i].address.county;
+      targetAddress4 = response1.locations[i].address.postal_code;
+      targetAddress5 = response1.locations[i].address.region;
+      targetAddress6 = response1.locations[i].address.state;
+      // targetTelephone = response1.location[0].contact_information.telephone_number;
+      // itemName = response2.product.esp_item.tcin;
+      // inStock = response2.product.availibility_status;
+
+
+        
+        
+        locationName.setAttribute("id", "listings" + i);
+        
+
+        var title = document.createElement('h3');
+        // stephen
+        var tarAddress1 = document.createElement('p')
+        var tarAddress2 = document.createElement('p')
+        var tarAddress3 = document.createElement('p')
+        var tarAddress4 = document.createElement('p')
+        var tarAddress5 = document.createElement('p')
+        var tarAddress6 = document.createElement('p')
+
+        $(selector).addClass(className);
+
+
+        title.textContent = city;
+        tarAddress1.textContent = targetAddress1;
+        tarAddress2.textContent = targetAddress2;
+        tarAddress3.textContent = targetAddress3;
+        tarAddress4.textContent = targetAddress4;
+        tarAddress5.textContent = targetAddress5;
+        tarAddress6.textContent = targetAddress6;
+        // stephen
+        
+        locationName.appendChild(title);
+        locationName.appendChild(tarAddress1);
+        locationName.appendChild(tarAddress2);
+        locationName.appendChild(tarAddress3);
+        locationName.appendChild(tarAddress4);
+        locationName.appendChild(tarAddress5);
+        locationName.appendChild(tarAddress6);
+
+
+        console.log(title);
+        console.log(locationName);
+        console.log(i);
+
+        $("#listings").append(locationName);
     }
   });
   // display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
+
+  
 }
-function displayTarget () {
-  let locationName = document.createElement('p');
-  let targetAddress = document.createElement('p');
-  let targetTelephone = document.createElement('p')
-  let itemName = document.createElement('p')
-  let inStock = document.createElement('p')
-  console.log(locationName)
 
-  locationName = document.locations[0].location_names[0].name;
-  targetAddress = document.locations[1].address;
-  targetTelephone = document.location[0].contact_information.telephone_number;
-  itemName = document.product.esp_item.tcin;
-  inStock = document.product.availibility_status;
-  console.log("hello");
 
-  locationName.textContent = locationName;
 
-// searchBtn.on('click', displayTarget)
-console.log("testing")
 
-}
+
+// function displayTarget (locationName, targetAddress, targetTelephone, itemName, inStock) {
+  
+//   console.log(locationName)
+
+//   locationName = document.locations[0].location_names[0].name;
+//   targetAddress = document.locations[1].address;
+//   targetTelephone = document.location[0].contact_information.telephone_number;
+//   itemName = document.product.esp_item.tcin;
+//   inStock = document.product.availibility_status;
+//   console.log("hello");
+
+//   targetContainer.textContent = locationName;
+
+// // searchBtn.on('click', displayTarget)
+// console.log("testing")
+
+// }
 
 // IMPORTANT!!!!!!!!
 // incorporate 2nd server side API
