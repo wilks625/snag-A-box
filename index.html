@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <h1 id="title">Snag-a-Box</h1>
   </header>
   <main>
@@ -37,6 +37,7 @@
       <div class="large-12 cell">
         <label>Radius:</label>
         <select id="radius-input">
+          <option value="5">5 miles</option>
           <option value="10">10 miles</option>
           <option value="25">25 miles</option>
           <option value="50">50 miles</option>
@@ -47,11 +48,10 @@
     </div>
 
     <div id="container-target" class="grid-x grid-padding-x info-card">
-      <div class="large-12 cell">
-        <div class="primary callout">
-          <h3 id="target-store-information"></h3>
-            <div id="listings">
-            </div>
+      <div class="large-9 cell">
+        <div id="target-store-information" class="primary callout">
+          <h3><strong> Target Stores within Search Radius:</strong> </h3>
+          <div id="listings"></div>
         </div>
       </div>
     </div>

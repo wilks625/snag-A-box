@@ -129,7 +129,7 @@ function getTargetStoreApi() {
 
       // locationName.setAttribute("id", "listings" + i);
 
-      var title = document.createElement("h3");
+      var title = document.createElement("h2");
       var tarAddress1 = document.createElement("p");
       var tarAddress2 = document.createElement("p");
       var tarAddress3 = document.createElement("p");
@@ -137,8 +137,8 @@ function getTargetStoreApi() {
       var tarAddress5 = document.createElement("p");
       var tarAddress6 = document.createElement("p");
       var tarTelephone = document.createElement("p");
-      var tarItemName = document.createElement("p");
-      var tarItemAvail = document.createElement("p");
+      var tarItemName = document.createElement("h4");
+      var tarItemAvail = document.createElement("h4");
 
       // var tarItemName = document.createElement('p')
 
@@ -153,7 +153,7 @@ function getTargetStoreApi() {
       tarAddress6.textContent = targetAddress6;
       tarTelephone.textContent = targetTelephone;
       tarItemName.textContent = itemName;
-      tarItemAvail.textContent = inStock;
+      tarItemAvail.textContent = "Availability: " + inStock;
 
       
 
