@@ -6,9 +6,7 @@ $(document).ready(function () {
   searchBtn.on("click", getTargetStoreApi);
 
 });
-// working on this code below to fetch target stores API
 let locationName = document.createElement("div");
-
 
 function getTargetStoreApi() {
   locationName.innerHTML = "";
@@ -18,9 +16,6 @@ function getTargetStoreApi() {
   console.log(zipInput);
   console.log(radiusInput);
 
-  // if (!searchInputVal) {
-  //   console.error("You need a search input value!");
-  //   return;
   var endpoint1 =
     "https://target-com-store-product-reviews-locations-data.p.rapidapi.com/location/search?zip=" +
     zipInput +
@@ -51,7 +46,7 @@ function getTargetStoreApi() {
       // Xbox series S is chosen
       tcin = 80790842;
       console.log(tcin);
-    } // if there is time, add validation for if user does not select a radio
+    } 
 
     console.log(tcin);
     for (var i = 0; i < response1.locations.length; i++) {
@@ -80,29 +75,13 @@ function getTargetStoreApi() {
         console.log(response2);
         console.log(response1);
         productAPI = response2;
-        //testing zone
-        //           for (var i = 0; i < response1.locations.length; i++) {
-        //           itemName = response2.product.title;
-        //           inStock = response2.product.availibility_status;
-
-        //         productsDisplay.setAttribute("id", "products" + i);
-
-        //         var tarItemName = document.createElement('p');
-        //         var tarItemAvail = document.createElement('p');
-
-        //         tarItemName.textContent = itemName;
-        //         tarItemAvail.textContent = inStock;
-        // console.log(itemName)
-        //         productsDisplay.appendChild(tarItemName);
-        //         productsDisplay.appendChild(tarItemAvail)
       });
-      console.log(productAPI)
-      console.log(response1)
+      // console.log(productAPI)
+      // console.log(response1)
         
-//////////////////////////////////////////////////////////////////////
+
       
       city = response1.locations[i].location_names[0].name;
-
       targetAddress1 = response1.locations[i].address.address_line1;
       targetAddress2 = response1.locations[i].address.city;
       targetAddress3 = response1.locations[i].address.county;
@@ -114,21 +93,8 @@ function getTargetStoreApi() {
       itemName = productAPI.product.title;
       inStock = productAPI.product.availability_status;
 
-      // itemName = response2.product.title;
-      // console.log(response2);
-
-      // inStock = response2.product.availibility_status;
-
-
-      
       locationName.setAttribute("id", "listings" + i);
       
-
-
-
-
-      // locationName.setAttribute("id", "listings" + i);
-
       var title = document.createElement("h2");
       var tarAddress1 = document.createElement("p");
       var tarAddress2 = document.createElement("p");
@@ -139,10 +105,6 @@ function getTargetStoreApi() {
       var tarTelephone = document.createElement("p");
       var tarItemName = document.createElement("h4");
       var tarItemAvail = document.createElement("h4");
-
-      // var tarItemName = document.createElement('p')
-
-      // $(selector).addClass(className);
 
       title.textContent = city;
       tarAddress1.textContent = targetAddress1;
@@ -155,8 +117,6 @@ function getTargetStoreApi() {
       tarItemName.textContent = itemName;
       tarItemAvail.textContent = "Availability: " + inStock;
 
-      
-
       locationName.appendChild(title);
       locationName.appendChild(tarAddress1);
       locationName.appendChild(tarAddress2);
@@ -168,75 +128,8 @@ function getTargetStoreApi() {
       locationName.appendChild(tarItemName);
       locationName.appendChild(tarItemAvail);
       
-
       $("#listings").append(locationName);
     }
-    
   });
-  // display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
 }
 
-// function displayTarget (locationName, targetAddress, targetTelephone, itemName, inStock) {
-
-//   console.log(locationName)
-
-//   locationName = document.locations[0].location_names[0].name;
-//   targetAddress = document.locations[1].address;
-// targetTelephone = document.location[0].contact_information.telephone_number;
-// itemName = document.product.esp_item.tcin;
-// inStock = document.product.availibility_status;
-//   console.log("hello");
-
-//   targetContainer.textContent = locationName;
-
-// // searchBtn.on('click', displayTarget)
-// console.log("testing")
-
-// }
-
-// IMPORTANT!!!!!!!!
-// incorporate 2nd server side API
-// incorporate local storage for users last inputs
-// mobile friendly, media queries???
-// take data from API and display in target information container
-// display to target box (h3)Location name, (p)Address, Telephone number, store hours, item name Item in stock value
-
-// working code below
-// function getSeriesXApi() {
-//     var requestUrl = 'https://api.bestbuy.com/v1/products((search=6428324))?apiKey=FCCrvACW16ZNhJEclroeeQ8f&pageSize=21&format=json';
-//     console.log(requestUrl);
-//     fetch(requestUrl)
-//       .then(function (response) {
-//         return response.json();
-//       })
-//       .then(function (data) {
-//         //Using console.log to examine the data
-//         console.log(data);
-//         console.log("lets go?")
-
-//         for (var i = 0; i < data.length; i++) {
-//           //Creating a h3 element and a p elementd
-//           // var userName = document.createElement('h3');
-//           var itemName = document.createElement("h3")
-//           var instoreAvail = document.createElement("p")
-//           var onlineAvail = document.createElement("p")
-//           console.log("lets go????")
-
-//           //Setting the text of the h3 element and p element.
-//           // instoreAvail.textContent = data.products.[i].activeUpdateDate;
-//           itemName = data.products[0].albumTitle;
-//           instoreAvail = data.products[0].inStoreAvailability;
-//           onlineAvail = data.products[0].onlineAvailability;
-
-//           //Appending the dynamically generated html to the div associated with the id="users"
-//           //Append will attach the element as the bottom most child.
-//           bbItemName.textContent = itemName
-//           bbInstoreAvail.textContent = instoreAvail
-//           bbOnlineAvail.textContent = onlineAvail
-//           console.log(itemName)
-//           console.log(instoreAvail)
-//           console.log(onlineAvail)
-//       });
-//   }
-//   searchBtn.on('click', getSeriesXApi);
-// working code above
