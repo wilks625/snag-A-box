@@ -1,10 +1,7 @@
 
-
 header {
-    
     text-align: center;
     background-color: dark grey;
-    
     position: sticky;
     top: 0;
     z-index: 999;
@@ -12,10 +9,7 @@ header {
 
 
 h1 {
-    
-    
     background-color: rgb(53, 56, 56);
-    
     padding: 20px;
     font-size: 60px;
     color: white;
@@ -30,8 +24,12 @@ h1 {
 
 
 .sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 100%; 
-    width: 375px; /* Set the width of the sidebar */
+    /* width: 375px; Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     /* z-index: 1; Stay on top */
     /* top: 0; Stay at the top */
@@ -41,15 +39,21 @@ h1 {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     padding-left: 10px;
+    
   }
 
   .info-card {
-      margin-left: 380px;
-      padding: 20px
-      
-     
+      /* margin-left: 380px;
+      padding: 20px */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
+.callout {
+    border: 0;
+}
 
 
 body {
@@ -283,10 +287,49 @@ body {
 
 
   /* Small only */
-@media screen and (max-width: 39.9375em) {}
+@media screen and (max-width: 39.9375em) {
+
+    h1 {
+        font-size:x-large;
+        padding: 5px;
+    }
+    .sidenav {
+        height: 290px;
+        width: 100%;
+        z-index: 1;
+        padding: 5px;
+    }
+
+    #listings {
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start; 
+    }
+}
+
+
+
 
 /* Medium and up */
-@media screen and (min-width: 40em) {}
+@media screen and (min-width: 40em) {
+    #target-store-information {
+        margin-left: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start; 
+    }
+}
 
 /* Large and up */
-@media screen and (min-width: 64em) {}
+@media screen and (min-width: 64em) {
+    #target-store-information {
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start; 
+    }
+}
