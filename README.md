@@ -34,4 +34,7 @@ You will be employer-competitive if you are able to:
 * 📖 [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 - - -
 Github: https://github.com/wilks625/snag-A-box
-Diployed site: wilks625/snag-A-box
+Deployed site: https://wilks625.github.io/snag-A-box/
+
+![Screen Shot 2021-04-10 at 12 27 05 AM](https://user-images.githubusercontent.com/76915726/114258302-b15f7f00-9993-11eb-9dfc-c71ad49540ae.png)
+
